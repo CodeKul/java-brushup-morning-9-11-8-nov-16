@@ -21,6 +21,8 @@
     <bytecodeTargetLevel>
       <module name="java-brushup_main" target="1.8" />
       <module name="java-brushup_test" target="1.8" />
+      <module name="temp-module_main" target="1.8" />
+      <module name="temp-module_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,6 +12,7 @@
     <orderEntry type="module" module-name="java-brushup_main" />
     <orderEntry type="library" name="Gradle: org.zkoss.calendar:calendar:2.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE" level="project" />
+    <orderEntry type="module" module-name="temp-module_main" />
     <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:1.4.1.RELEASE" level="project" />
