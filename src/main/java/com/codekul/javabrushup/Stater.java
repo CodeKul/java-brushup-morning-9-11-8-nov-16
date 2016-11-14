@@ -1,6 +1,7 @@
 package com.codekul.javabrushup;
 
 import com.codekul.javabrushup.classesandobjects.Car;
+import com.codekul.javabrushup.exception.CarSpeedCal;
 import com.codekul.javabrushup.inheritance.Device;
 import com.codekul.javabrushup.inheritance.Mobile;
 import com.codekul.javabrushup.interfaces.Bird;
@@ -67,8 +68,22 @@ public class Stater {
         tracker.track(bird);
     }
 
-    public void exceptionHandling(){
+    public void exceptionHandling() /*throws Exception*/ {
 
+        CarSpeedCal calc = new CarSpeedCal();
+        System.out.println("Speed is  - "+calc.speed(100,500) );
+        System.out.println("Speed is  - "+calc.speed(100,50) );
+        System.out.println("Speed is  - "+calc.speed(10,50) );
+        System.out.println("Speed is  - "+calc.speed(10,0) );
+        System.out.println("Speed is  - "+calc.speed(10,41) );
+        System.out.println("Speed is  - "+calc.speed(10,60) );
+
+        try {
+            calc.reportSpeed(500);
+        } catch (Exception e) {
+            System.out.println("Message is - "+e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     public void innerClasses() {
@@ -84,6 +99,10 @@ public class Stater {
     }
 
     public void collections(){
+
+    }
+
+    public void java8(){
 
     }
 
