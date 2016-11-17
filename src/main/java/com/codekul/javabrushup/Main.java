@@ -9,6 +9,6 @@ public class Main {
     public static void main(String[] args) {
 
         Stater stater = new Stater();
-        stater.exceptionHandling();
+        stater.collections();
     }
 }

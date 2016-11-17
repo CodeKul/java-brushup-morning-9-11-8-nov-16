@@ -4,6 +4,8 @@ import com.codekul.javabrushup.classesandobjects.Car;
 import com.codekul.javabrushup.exception.CarSpeedCal;
 import com.codekul.javabrushup.functional.Line;
 import com.codekul.javabrushup.functional.Square;
+import com.codekul.javabrushup.generics.Any;
+import com.codekul.javabrushup.generics.AnyGen;
 import com.codekul.javabrushup.inheritance.Device;
 import com.codekul.javabrushup.inheritance.Mobile;
 import com.codekul.javabrushup.innerclass.Outer;
@@ -12,7 +14,7 @@ import com.codekul.javabrushup.interfaces.GpsTracker;
 import com.codekul.javabrushup.interfaces.Human;
 import com.codekul.javabrushup.interfaces.LightListener;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.function.Function;
 
 /**
@@ -130,10 +132,81 @@ public class Stater {
 
     public void generics(){
 
+        Any any = new Any();
+        any.assignAny();
+
+        AnyGen<String> strAnyGen = new AnyGen<>();
+        strAnyGen.setAnyThing("android");
+        System.out.println("Anything - "+strAnyGen.getAnyThing());;
     }
 
     public void collections(){
 
+       /* Collection<String> collStr  = new ArrayList<>();
+
+        collStr.add("android");
+        collStr.add("java");
+        collStr.add("Node");
+        collStr.add("typescript");
+
+        collStr.remove("android");
+        //collStr.get(0);
+
+        collStr.forEach(System.out::println);
+
+        for (String s : collStr) {
+            System.out.println("Data is - "+s);
+        }
+
+        List<Integer> integers = new LinkedList<>();
+        integers.add(1);
+        integers.add(1);
+        integers.add(0,2);
+
+        int oth = integers.get(0);
+
+        Iterator<Integer> iteratorInt =  integers.iterator();
+        while(iteratorInt.hasNext()){
+            System.out.println("Iterator - "+iteratorInt.next());
+        }*/
+
+        TreeSet<String> strings = new TreeSet<>();
+//        strings.add("Android");
+//        strings.add("Android");
+//        strings.add(null);
+//        strings.add(null);
+        strings.add("Java");
+        strings.add("PHP");
+        strings.add("Node");
+        strings.add("JS");
+        //strings.add(null);
+        strings.add("Ts");
+        strings.forEach(System.out::println);
+
+        Map<Integer,String> map = new HashMap<>();
+        map.put(1,"Android");
+        map.put(2,"Java");
+        map.put(3,"JS");
+        map.put(4,"TS");
+
+        map.forEach((integer, s) -> System.out.println("Key - "+integer +" Value - "+s));
+
+        Set<Integer> keys = map.keySet();
+
+        Collection<String> values = map.values();
+
+        Set<Map.Entry<Integer,String>> entries = map.entrySet();
+        entries.forEach(entry -> {
+            System.out.println("Key - "+entry.getKey());
+            System.out.println("Value - "+entry.getValue());
+        });
+
+        Iterator<Map.Entry<Integer,String>> iterator = entries.iterator();
+        while(iterator.hasNext()) {
+            Map.Entry<Integer, String> entry = iterator.next();
+            entry.getKey();
+            entry.getValue();
+        }
     }
 
     public void java8(){
